@@ -1,0 +1,231 @@
+#spidermanSection{
+    display:none;
+    text-align:center;
+}
+
+#spiderman{
+    width:220px;
+    position:relative;
+    top:-500px;
+}
+
+.swing{
+    animation:swingDown 3s ease forwards;
+}
+
+@keyframes swingDown{
+    from{
+        top:-500px;
+    }
+    to{
+        top:0;
+    }
+}
+
+#rose{
+transform:scale(0);
+animation:bloom 3s forwards;
+}
+
+@keyframes bloom{
+
+0%{
+transform:scale(0);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+#finalScene{
+    position:relative;
+    height:500px;
+    overflow:hidden;
+}
+
+.boy{
+    position:absolute;
+    width:180px;
+    left:-220px;
+    bottom:0;
+}
+
+.girl{
+    position:absolute;
+    width:180px;
+    right:-220px;
+    bottom:0;
+    transform:scaleX(-1);
+}
+
+.heart{
+    position:absolute;
+    left:50%;
+    top:120px;
+    transform:translateX(-50%);
+    font-size:70px;
+    opacity:0;
+}
+
+.birthdayText{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+    opacity:0;
+}
+.moveBoy{
+    animation:boyMove 3s forwards;
+}
+
+.moveGirl{
+    animation:girlMove 3s forwards;
+}
+
+@keyframes boyMove{
+    to{
+        left:38%;
+    }
+}
+
+@keyframes girlMove{
+    to{
+        right:38%;
+    }
+}
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    overflow-x:hidden;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#page2{
+    position:relative;
+}
+
+.bg{
+    width:100%;
+    height:100vh;
+    object-fit:cover;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+#message{
+    display:none;
+}
+#page2,
+#page3,
+#finalScene{
+    display:none;
+}
+.gift-container{
+    display:flex;
+    gap:40px;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.photo-card,
+.rose-card{
+    width:320px;
+    height:400px;
+    background:white;
+    border-radius:20px;
+    padding:15px;
+    box-shadow:0 0 20px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.photo-card img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius:15px;
+}
+
+.rose-card img{
+    width:220px;
+    
+}
+.web-text{
+    font-size:48px;
+    font-weight:bold;
+    color:#ff1744;
+    text-align:center;
+    margin:20px 0;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.3);
+}
+.birthday-heading{
+    font-size:48px;
+    text-align:center;
+    margin-bottom:40px;
+    color:#ff3366;
+    text-shadow:2px 2px 10px rgba(0,0,0,0.2);
+}
+.celebrate-container{
+    display:flex;
+    gap:40px;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.champagne-card,
+.cake-card{
+    width:300px;
+    height:350px;
+    background:white;
+    border-radius:20px;
+    padding:15px;
+    box-shadow:0 0 20px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.champagne-card img,
+.cake-card img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.celebrate-title{
+    font-size:48px;
+    color:#ff3366;
+    margin-bottom:40px;
+}
+#page4{
+    display:none;
+}
+#finalScene{
+    display:none;
+    position:relative;
+    height:500px;
+    overflow:hidden;
+}
+@keyframes boyMove{
+    to{
+        left:44%;
+    }
+}
+
+@keyframes girlMove{
+    to{
+        right:44%;
+    }
+}
