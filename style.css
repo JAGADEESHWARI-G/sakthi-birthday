@@ -215,8 +215,14 @@ section{
 #finalScene{
     display:none;
     position:relative;
-    height:500px;
+    width:100%;
+    height:100vh;
     overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
 }
 @keyframes boyMove{
     to{
@@ -303,6 +309,14 @@ button:hover{
     transform:translate(-50%,-50%);
     opacity:0;
 }
+.birthdayText{
+    position:absolute;
+    top:75%;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    opacity:0;
+}
 
 .showPhoto{
     animation:zoomPhoto 2s forwards;
@@ -318,4 +332,103 @@ button:hover{
         opacity:1;
         transform:translate(-50%,-50%) scale(1);
     }
+}
+@media (max-width: 768px){
+
+    h1{
+        font-size:32px;
+        text-align:center;
+    }
+
+    h2{
+        font-size:24px;
+        text-align:center;
+    }
+
+    .gift-container,
+    .celebrate-container{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .photo-card,
+    .rose-card,
+    .cake-card,
+    .champagne-card{
+        width:90%;
+        max-width:350px;
+        height:auto;
+    }
+
+    .photo-card img,
+    .rose-card img,
+    .cake-card img,
+    .champagne-card img{
+        width:100%;
+        height:auto;
+    }
+
+    #spiderman{
+        width:150px;
+    }
+
+    .mergedPhoto{
+        width:250px;
+    }
+
+    .birthdayText{
+        font-size:28px;
+        padding:10px;
+    }
+
+    button{
+        font-size:16px;
+        padding:10px 20px;
+    }
+
+    .letter-card{
+        width:90%;
+        padding:20px;
+    }
+
+    .heart{
+        font-size:60px;
+    }
+
+}
+@media (max-width:768px){
+
+    .gift-container,
+    .celebrate-container{
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+}
+@media (max-width:768px){
+
+    #finalScene{
+        position:relative;
+        min-height:100vh;
+    }
+
+    .mergedPhoto{
+        position:absolute;
+        left:50%;
+        top:50% !important;
+        transform:translate(-50%,-50%) !important;
+        width:280px;
+        max-width:80%;
+    }
+
+    .birthdayText{
+        position:absolute;
+        left:50%;
+        top:75%;
+        transform:translateX(-50%);
+        width:90%;
+        text-align:center;
+    }
+
 }
