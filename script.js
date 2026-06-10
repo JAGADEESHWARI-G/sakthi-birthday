@@ -70,27 +70,6 @@ document.getElementById("nextBtn")
     document.getElementById("page3").style.display="flex";
 
 });
-document.getElementById("closeCard")
-.addEventListener("click",()=>{
-
-    document.getElementById("page3").style.display="none";
-    document.getElementById("finalScene").style.display="block";
-
-    document.querySelector(".boy")
-    .classList.add("moveBoy");
-
-    document.querySelector(".girl")
-    .classList.add("moveGirl");
-
-    setTimeout(()=>{
-        document.querySelector(".heart").style.opacity="1";
-    },3000);
-
-    setTimeout(()=>{
-        document.querySelector(".birthdayText").style.opacity="1";
-    },3500);
-
-});
 document.getElementById("closeLetter")
 .addEventListener("click",()=>{
 
@@ -105,12 +84,18 @@ document.getElementById("closeLetter")
         .classList.add("moveGirl");
 
     setTimeout(()=>{
-        document.querySelector(".heart").style.opacity="1";
+
+        document.querySelector(".boy").style.display="none";
+        document.querySelector(".girl").style.display="none";
+
+        document.querySelector(".mergedPhoto")
+            .classList.add("showPhoto");
+
     },3000);
 
     setTimeout(()=>{
         document.querySelector(".birthdayText").style.opacity="1";
-    },3500);
+    },4500);
 
 });
 const noBtn = document.getElementById("noBtn");

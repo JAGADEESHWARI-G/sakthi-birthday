@@ -229,3 +229,93 @@ section{
         right:44%;
     }
 }
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(
+        135deg,
+        #E6E6FA,
+        #D8BFD8,
+        #C8A2C8
+    );
+}
+#page1,
+#page2,
+#page3,
+#page4,
+#finalScene{
+    background:linear-gradient(
+        135deg,
+        #E6E6FA,
+        #D8BFD8,
+        #C8A2C8
+    );
+}
+.photo-card,
+.rose-card,
+.cake-card,
+.champagne-card,
+.letter-card{
+    background:rgba(255,255,255,0.4);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.5);
+    border-radius:20px;
+    color:#4B0082;
+}
+h1,h2,h3,h4{
+    color:#6A0DAD;
+    text-shadow:0 0 10px rgba(255,255,255,0.8);
+}
+button{
+    background:#B57EDC;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#CDA4DE;
+
+    transform:scale(1.08);
+}
+.heart{
+    font-size:90px;
+    filter:drop-shadow(0 0 15px #FF69B4);
+}
+.birthdayText{
+    color:#6A0DAD;
+    font-size:50px;
+    text-shadow:
+        0 0 10px white,
+        0 0 20px #D8BFD8,
+        0 0 30px #B57EDC;
+}
+.mergedPhoto{
+    width:350px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    opacity:0;
+}
+
+.showPhoto{
+    animation:zoomPhoto 2s forwards;
+}
+
+@keyframes zoomPhoto{
+    from{
+        opacity:0;
+        transform:translate(-50%,-50%) scale(0.5);
+    }
+
+    to{
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1);
+    }
+}
