@@ -25,46 +25,6 @@ document.getElementById("yesBtn").addEventListener("click",()=>{
 
 
 
-    const final = document.getElementById("finalScene");
-    final.style.display="flex";
-
-    const boy = document.querySelector(".boy");
-    const girl = document.querySelector(".girl");
-    const merged = document.querySelector(".mergedPhoto");
-    const text = document.querySelector(".birthdayText");
-
-    // RESET (IMPORTANT - remove old classes too)
-    boy.classList.remove("moveBoy","fadeOut");
-    girl.classList.remove("moveGirl","fadeOut");
-    merged.classList.remove("showPhoto");
-
-    boy.style.opacity = "1";
-    girl.style.opacity = "1";
-
-    text.style.opacity = "0";
-
-    // STEP 1: move
-    setTimeout(() => {
-        boy.classList.add("moveBoy");
-        girl.classList.add("moveGirl");
-    }, 300);
-
-    // STEP 2: fade out
-    setTimeout(() => {
-        boy.classList.add("fadeOut");
-        girl.classList.add("fadeOut");
-    }, 2500);
-
-    // STEP 3: show merged photo
-    setTimeout(() => {
-        merged.classList.add("showPhoto");
-    }, 3800);
-
-    // STEP 4: show text
-    setTimeout(() => {
-        text.style.opacity = "1";
-    }, 5000);
-
 
 /* NO BUTTON */
 document.getElementById("noBtn").addEventListener("click",()=>{
@@ -104,7 +64,31 @@ document.getElementById("closeLetter").addEventListener("click", () => {
         merged.classList.add("showPhoto");
     }, 3800);
 
-    setTimeout(() => {
-        text.style.opacity = "1";
-    }, 5000);
+   setTimeout(() => {
+    startFinalAnimation();
+}, 5000);
 });
+function startFinalAnimation(){
+
+    showPage("finalScene");
+
+    const text = document.querySelector(".birthdayText");
+
+    const message = "LOVE YOU FOREVER ❤️";
+
+    text.innerHTML = "";
+
+    let i = 0;
+
+    const typing = setInterval(() => {
+
+        text.innerHTML += message.charAt(i);
+
+        i++;
+
+        if(i >= message.length){
+            clearInterval(typing);
+        }
+
+    },100);
+}
