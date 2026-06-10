@@ -39,34 +39,20 @@ document.getElementById("closeLetter").addEventListener("click", () => {
 
     showPage("finalScene");
 
-    const boy = document.querySelector(".boy");
-    const girl = document.querySelector(".girl");
     const merged = document.querySelector(".mergedPhoto");
-    const text = document.querySelector(".birthdayText");
 
-    boy.classList.remove("moveBoy","fadeOut");
-    girl.classList.remove("moveGirl","fadeOut");
-    merged.classList.remove("showPhoto");
+    if(merged){
+        merged.classList.remove("showPhoto");
 
-    text.style.opacity = "0";
-
-    setTimeout(() => {
-        boy.classList.add("moveBoy");
-        girl.classList.add("moveGirl");
-    }, 300);
+        setTimeout(() => {
+            merged.classList.add("showPhoto");
+        }, 500);
+    }
 
     setTimeout(() => {
-        boy.classList.add("fadeOut");
-        girl.classList.add("fadeOut");
+        startFinalAnimation();
     }, 2500);
 
-    setTimeout(() => {
-        merged.classList.add("showPhoto");
-    }, 3800);
-
-   setTimeout(() => {
-    startFinalAnimation();
-}, 5000);
 });
 function startFinalAnimation(){
 
