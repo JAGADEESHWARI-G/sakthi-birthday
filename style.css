@@ -41,62 +41,9 @@ opacity:1;
 
 }
 
-#finalScene{
-    position:relative;
-    height:500px;
-    overflow:hidden;
-}
 
-.boy{
-    position:absolute;
-    width:180px;
-    left:-220px;
-    bottom:0;
-}
 
-.girl{
-    position:absolute;
-    width:180px;
-    right:-220px;
-    bottom:0;
-    transform:scaleX(-1);
-}
 
-.heart{
-    position:absolute;
-    left:50%;
-    top:120px;
-    transform:translateX(-50%);
-    font-size:70px;
-    opacity:0;
-}
-
-.birthdayText{
-    position:absolute;
-    bottom:20px;
-    width:100%;
-    text-align:center;
-    opacity:0;
-}
-.moveBoy{
-    animation:boyMove 3s forwards;
-}
-
-.moveGirl{
-    animation:girlMove 3s forwards;
-}
-
-@keyframes boyMove{
-    to{
-        left:38%;
-    }
-}
-
-@keyframes girlMove{
-    to{
-        right:38%;
-    }
-}
 body{
     margin:0;
     padding:0;
@@ -218,22 +165,30 @@ section{
     width:100%;
     height:100vh;
     overflow:hidden;
-
-    display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
 }
-@keyframes boyMove{
-    to{
-        left:44%;
-    }
+.boy{
+    transition: left 2s ease, opacity 1s ease;
 }
 
-@keyframes girlMove{
-    to{
-        right:44%;
-    }
+.girl{
+    transition: right 2s ease, opacity 1s ease;
+}
+.moveBoy{
+    left:44%;
+}
+
+.moveGirl{
+    right:44%;
+}
+.fadeOut{
+    opacity:0;
+}
+.showPhoto{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1);
 }
 body{
     margin:0;
@@ -301,26 +256,8 @@ button:hover{
         0 0 20px #D8BFD8,
         0 0 30px #B57EDC;
 }
-.mergedPhoto{
-    width:350px;
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    opacity:0;
-}
-.birthdayText{
-    position:absolute;
-    top:75%;
-    left:50%;
-    transform:translateX(-50%);
-    text-align:center;
-    opacity:0;
-}
 
-.showPhoto{
-    animation:zoomPhoto 2s forwards;
-}
+
 
 @keyframes zoomPhoto{
     from{
@@ -439,17 +376,10 @@ html, body {
   overflow-y: auto;
 }
 section {
-  min-height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-#finalScene {
   display: none;
   min-height: 100vh;
-  width: 100%;
   position: relative;
-  overflow: hidden;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+#page1 {
+  display: flex;
 }
