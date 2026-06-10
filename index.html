@@ -10,8 +10,10 @@
 
 
 </head>
+
 <body>
 <section id="page1">
+   
     <h1>Do You Love Me? ❤️</h1>
 
     <div class="buttons">
@@ -26,13 +28,14 @@
             Happy Birthday Sakthivel 🎉
         </div>
 
-        <button id="openGift">
-            Open 🎁
-        </button>
+        
+            <button onclick="showPage('page2')">Open 🎁</button>
+        
     </div>
 </section>
 
 <section id="page2">
+    
 
 <div class="gift-container">
     
@@ -51,10 +54,12 @@
 
 </div>
 
-<button id="nextBtn">More ➜</button>
+
+<button onclick="showPage('page3')">More💘</button>
 
 </section>
 <section id="page3">
+    
 
 <h1 class="celebrate-title">
     🎉 Cheers To 20 🎉
@@ -74,10 +79,8 @@
 
 <div class="postcard">
 
-    <button id="openCard">
-        Open Letter 💌
-    </button>
-
+    
+    <button onclick="showPage('page4')">Open Letter 💌</button>
     <div id="message">
 
         <p>
@@ -87,6 +90,7 @@
         <button id="closeCard">
             Close
         </button>
+        
 
     </div>
 
@@ -120,14 +124,16 @@
             and finally lots and lots of mwahhhs 💋💋💋
         </p>
 
-        <button id="closeLetter">
-            Close Letter
-        </button>
+        
+        <button onclick="showPage('finalScene')">Close Letter✉️</button>
 
     </div>
 
 </section>
-<div id="finalScene">
+
+
+
+<section id="finalScene">
 
     <img src="images/bg.png" class="boy">
 
@@ -139,14 +145,7 @@
         Once Again Happy Birthday Pattu ❤️
     </h1>
 
-</div>
-
 </section>
-<script src="script.js"></script>
-<script>
-  window.onload = function () {
-    window.scrollTo(0, 0);
-  };
-</script>
+
 </body>
 </html>

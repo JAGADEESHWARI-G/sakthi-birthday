@@ -436,4 +436,20 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  overflow-y: auto;
+}
+section {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+#finalScene {
+  display: none;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

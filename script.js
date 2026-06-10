@@ -103,3 +103,21 @@ const noBtn = document.getElementById("noBtn");
 noBtn.addEventListener("click", () => {
     alert("❤️ Oii Pattu, only YES is allowed! Click Yes 😘");
 });
+function showPage(pageId) {
+
+  // hide all pages
+  document.querySelectorAll("section").forEach(sec => {
+    sec.style.display = "none";
+  });
+
+  // show selected page
+  document.getElementById(pageId).style.display = "flex";
+
+  // ALWAYS TOP
+  window.scrollTo(0, 0);
+}
+
+// initial page
+document.addEventListener("DOMContentLoaded", function () {
+  showPage("page1");
+});
