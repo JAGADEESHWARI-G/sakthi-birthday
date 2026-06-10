@@ -23,29 +23,7 @@ document.getElementById("yesBtn").addEventListener("click",()=>{
     document.getElementById("spiderman").classList.add("swing");
 });
 
-/* OPEN GIFT */
-document.getElementById("openGift").addEventListener("click",()=>{
-    showPage("page2");
-});
 
-/* NEXT */
-document.getElementById("nextBtn").addEventListener("click",()=>{
-    showPage("page3");
-});
-
-/* OPEN LETTER */
-document.getElementById("openCard").addEventListener("click",()=>{
-    showPage("page4");
-});
-
-/* FINAL SCENE ANIMATION */
-/* FINAL SCENE ANIMATION */
-document.getElementById("closeLetter").addEventListener("click", () => {
-
-    // show final scene FIRST
-    document.querySelectorAll("section").forEach(sec=>{
-        sec.style.display="none";
-    });
 
     const final = document.getElementById("finalScene");
     final.style.display="flex";
@@ -86,7 +64,7 @@ document.getElementById("closeLetter").addEventListener("click", () => {
     setTimeout(() => {
         text.style.opacity = "1";
     }, 5000);
-});
+
 
 /* NO BUTTON */
 document.getElementById("noBtn").addEventListener("click",()=>{
@@ -96,4 +74,37 @@ document.getElementById("noBtn").addEventListener("click",()=>{
 /* DEFAULT */
 document.addEventListener("DOMContentLoaded",()=>{
     showPage("page1");
+});
+document.getElementById("closeLetter").addEventListener("click", () => {
+
+    showPage("finalScene");
+
+    const boy = document.querySelector(".boy");
+    const girl = document.querySelector(".girl");
+    const merged = document.querySelector(".mergedPhoto");
+    const text = document.querySelector(".birthdayText");
+
+    boy.classList.remove("moveBoy","fadeOut");
+    girl.classList.remove("moveGirl","fadeOut");
+    merged.classList.remove("showPhoto");
+
+    text.style.opacity = "0";
+
+    setTimeout(() => {
+        boy.classList.add("moveBoy");
+        girl.classList.add("moveGirl");
+    }, 300);
+
+    setTimeout(() => {
+        boy.classList.add("fadeOut");
+        girl.classList.add("fadeOut");
+    }, 2500);
+
+    setTimeout(() => {
+        merged.classList.add("showPhoto");
+    }, 3800);
+
+    setTimeout(() => {
+        text.style.opacity = "1";
+    }, 5000);
 });
